@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Provider } from "@/components/ui/provider"
+import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Menu Card",
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Provider>
+          <Navbar />
           {children}
         </Provider>
       </body>
