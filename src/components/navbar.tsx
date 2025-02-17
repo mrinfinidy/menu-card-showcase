@@ -2,11 +2,22 @@
 
 import { useRouter } from "next/navigation";
 import NextLink from "next/link";
-import { Box, Container, Flex, Heading, Stack } from "@chakra-ui/react";
-
-type NavbarProps = {
-  path: string;
-};
+import { 
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Icon,
+  Stack
+} from "@chakra-ui/react";
+import {
+  MenuContent,
+  MenuItem,
+  MenuRoot,
+  MenuTrigger
+} from "@/components/ui/menu";
+import { RxHamburgerMenu } from "react-icons/rx";
+import Logo from "./logo";
 
 const Navbar = () => {
   const router = useRouter();
@@ -28,7 +39,7 @@ const Navbar = () => {
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'} onClick={() => router.push('/')}>
-            Logo
+            <Logo />
           </Heading>
         </Flex>
 
@@ -43,10 +54,28 @@ const Navbar = () => {
           <NextLink href="/food" onClick={() => router.push('/food')}>
             Food
           </NextLink>
-          <NextLink href="/drinks">
+          <NextLink href="/drinks" onClick={() => router.push('drinks')}>
             Drinks
           </NextLink>
         </Stack>
+
+        <Box ml="auto">
+            <Box ml={2} display={{ base: 'inline-block', md:'none' }}>
+              <MenuRoot>
+                <MenuTrigger>
+                  <Icon as={RxHamburgerMenu} w={6} h={6} />
+                </MenuTrigger>
+                <MenuContent>
+                  <NextLink href="/food" onClick={() => router.push('/food')}>
+                    <MenuItem value="Food" _focus={{ boxShadow: "none" }}>Food</MenuItem>
+                  </NextLink>
+                  <NextLink href="/drinks" onClick={() => router.push('/drinks')}>
+                    <MenuItem value="Drinks" _focus={{ boxShadow: "none" }}>Drinks</MenuItem>
+                  </NextLink>
+                </MenuContent>
+              </MenuRoot>
+          </Box>
+        </Box>
 
       </Container>
     </Box>
