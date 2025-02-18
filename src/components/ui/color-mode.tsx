@@ -67,6 +67,7 @@ export const ColorModeButton = React.forwardRef<
             height: "5",
           },
         }}
+        color={"orangeFg"}
       >
         <ColorModeIcon />
       </IconButton>
