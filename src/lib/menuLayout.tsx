@@ -12,6 +12,10 @@ const MenuLayout = ({ children }: MenuLayoutProps) => (
     p={3}
     mb={6}
     alignItems="center"
+    data-state="open"
+    _open={{
+      animation: "fade-in 2500ms ease-out",
+    }}
   >
     <Flex
         direction="column"
