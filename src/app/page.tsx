@@ -1,34 +1,15 @@
 import { Box, Container, Flex, Text } from "@chakra-ui/react";
+import MenuLayout from "@/lib/menuLayout";
+import TitleLayout from "@/lib/titleLayout";
 
 const Home = () => {
   return (
     <Container>
-      <Box
-        maxW="container.xl"
-        borderRadius="lg"
-        p={3}
-        mb={6}
-        alignItems="center"
-      >
-        <Flex
-            direction="column"
-            align="center"
-            justify="center"
-            w="100%"
-            h="100%"
-        >
-          <Flex direction="row" mt="2">
-            <Text
-              fontSize="2xl"
-              fontWeight="bold"
-              mb="4"
-            >
-              Menu Card
-            </Text>
-          </Flex>
-        </Flex>
-      </Box>
-
+      <MenuLayout>
+        <TitleLayout>
+          Menu Card
+        </TitleLayout>
+      </MenuLayout>
     </Container>
   );
 }

@@ -30,7 +30,7 @@ const Logo = () => {
           fontWeight="bold"
           ml={3}
         >
-          Menu Card
+          My Restaurant
         </Text>
       </LogoBox>
     </Link>

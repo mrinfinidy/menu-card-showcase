@@ -1,8 +1,16 @@
+import { Container } from "@chakra-ui/react";
+import MenuLayout from "@/lib/menuLayout";
+import TitleLayout from "@/lib/titleLayout";
+
 const Food = () => {
  return (
-   <div>
-     <h1>Food</h1>
-   </div>
+    <Container>
+      <MenuLayout>
+        <TitleLayout>
+          Food
+        </TitleLayout>
+      </MenuLayout>
+    </Container>
   )
 }
 
