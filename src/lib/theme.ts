@@ -1,7 +1,14 @@
-import { createSystem, defaultConfig } from "@chakra-ui/react"
+import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react"
 
-export const system = createSystem(defaultConfig, {
+const config = defineConfig({
   theme: {
+    semanticTokens: {
+      colors: {
+        DEFAULT: {
+          value: { _light: "{colors.orange.600}", _dark: "{colors.orange.200}"},
+        },
+      },
+    },
     tokens: {
       fonts: {
         heading: { value: `'Figtree', sans-serif` },
@@ -9,4 +16,6 @@ export const system = createSystem(defaultConfig, {
       },
     },
   },
-})
+});
+
+export const system = createSystem(defaultConfig, config);

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Provider } from "@/components/ui/provider"
 import Navbar from "@/components/navbar";
+import { Provider } from "@/components/ui/provider";
 
 export const metadata: Metadata = {
   title: "Menu Card",
