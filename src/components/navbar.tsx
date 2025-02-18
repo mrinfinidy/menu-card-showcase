@@ -16,6 +16,7 @@ import {
   MenuRoot,
   MenuTrigger
 } from "@/components/ui/menu";
+import { ColorModeButton } from "@/components/ui/color-mode";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Logo from "./logo";
 
@@ -50,6 +51,7 @@ const Navbar = () => {
           alignItems="center"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
+          gap={5}
         >
           <NextLink href="/food" onClick={() => router.push('/food')}>
             Food
@@ -60,20 +62,21 @@ const Navbar = () => {
         </Stack>
 
         <Box ml="auto">
-            <Box ml={2} display={{ base: 'inline-block', md:'none' }}>
-              <MenuRoot>
-                <MenuTrigger>
-                  <Icon as={RxHamburgerMenu} w={6} h={6} />
-                </MenuTrigger>
-                <MenuContent>
-                  <NextLink href="/food" onClick={() => router.push('/food')}>
-                    <MenuItem value="Food" _focus={{ boxShadow: "none" }}>Food</MenuItem>
-                  </NextLink>
-                  <NextLink href="/drinks" onClick={() => router.push('/drinks')}>
-                    <MenuItem value="Drinks" _focus={{ boxShadow: "none" }}>Drinks</MenuItem>
-                  </NextLink>
-                </MenuContent>
-              </MenuRoot>
+          <ColorModeButton />
+          <Box ml={2} display={{ base: 'inline-block', md:'none' }}>
+            <MenuRoot>
+              <MenuTrigger>
+                <Icon as={RxHamburgerMenu} w={6} h={6} />
+              </MenuTrigger>
+              <MenuContent>
+                <NextLink href="/food" onClick={() => router.push('/food')}>
+                  <MenuItem value="Food" _focus={{ boxShadow: "none" }}>Food</MenuItem>
+                </NextLink>
+                <NextLink href="/drinks" onClick={() => router.push('/drinks')}>
+                  <MenuItem value="Drinks" _focus={{ boxShadow: "none" }}>Drinks</MenuItem>
+                </NextLink>
+              </MenuContent>
+            </MenuRoot>
           </Box>
         </Box>
 

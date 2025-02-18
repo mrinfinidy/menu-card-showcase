@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { useColorModeValue } from "@/components/ui/color-mode";
 
 const LogoBox = styled.span `
   font-weight: bold;
@@ -18,7 +19,7 @@ const LogoBox = styled.span `
 `
 
 const Logo = () => {
-  const navbarImg = "/images/navbarImg.png";
+  const navbarImg = `/images/navbarImg${useColorModeValue('', '-dark')}.png`;
 
   return (
     <Link href="/" scroll={false}>
