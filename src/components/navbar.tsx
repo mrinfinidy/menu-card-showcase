@@ -29,6 +29,7 @@ const Navbar = () => {
       as="nav"
       w="100%"
       zIndex={1}
+      color={"orangeFg"}
     >
       <Container
         display="flex"

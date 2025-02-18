@@ -12,6 +12,7 @@ const TitleLayout = ({ children, fontSize="2xl", fontWeight="bold", mb="4" }: Ti
     fontSize={fontSize}
     fontWeight={fontWeight}
     mb={mb}
+    color={"orangeFg"}
   >
     { children }
   </Text>

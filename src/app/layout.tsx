@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Provider>
-          <Box bg={"orange"}>
+          <Box bg={"orangeBg"}>
             <Navbar />
             {children}
           </Box>
