@@ -14,7 +14,7 @@ const MenuLayout = ({ children }: MenuLayoutProps) => (
     alignItems="center"
     data-state="open"
     _open={{
-      animation: "fade-in 2500ms ease-out",
+      animation: "fade-in 500ms ease-out",
     }}
   >
     <Flex

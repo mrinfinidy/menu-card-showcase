@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import { Provider } from "@/components/ui/provider";
+import { Box } from "@chakra-ui/react";
 
 export const metadata: Metadata = {
   title: "Menu Card",
@@ -16,8 +17,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Provider>
-          <Navbar />
-          {children}
+          <Box bg={"orange"}>
+            <Navbar />
+            {children}
+          </Box>
         </Provider>
       </body>
     </html>
