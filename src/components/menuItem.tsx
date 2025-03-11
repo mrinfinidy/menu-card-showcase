@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from 'react';
 import { Avatar, Button, Card } from '@chakra-ui/react';
