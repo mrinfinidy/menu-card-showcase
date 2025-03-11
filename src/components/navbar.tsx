@@ -25,7 +25,6 @@ const Navbar = () => {
 
   return (
     <Box
-      position="fixed"
       as="nav"
       w="100%"
       zIndex={1}
