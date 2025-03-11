@@ -7,7 +7,7 @@ const Home = () => {
     <Container>
       <MenuLayout>
         <TitleLayout>
-          Menu Card
+          Welcome to my restaurant
         </TitleLayout>
       </MenuLayout>
     </Container>
