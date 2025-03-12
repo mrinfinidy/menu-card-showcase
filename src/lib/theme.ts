@@ -34,4 +34,9 @@ export const menuItemColors = {
   colorButtonDark: "black",
 };
 
+export const footerColors = {
+  colorLight: "orange.600",
+  colorDark: "orange.200",
+}
+
 export const system = createSystem(defaultConfig, config);
