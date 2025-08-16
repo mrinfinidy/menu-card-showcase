@@ -19,7 +19,6 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  console.log("colorMode:", useColorMode().colorMode)
   const navbarImg = `/images/navbarImg-${useColorMode().colorMode}.png`;
 
   return (
