@@ -28,18 +28,18 @@ const MenuItem: React.FC<MenuItemProps> = ({ name, description, price, imageSrc 
         toaster.success({
           title: `Order for ${name} placed`,
           action: {
-      			label: "Ok",
+            label: "Ok",
             onClick: () => console.log("Order placed"),
           },
         })
-      }) 
+      })
       .catch((error) => {
         console.error(error);
         toaster.error({
           title: "Error",
           description: `Order for ${name} could not be placed`,
           action: {
-      			label: "Ok",
+            label: "Ok",
             onClick: () => console.log("Order not placed"),
           },
         })
@@ -47,7 +47,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ name, description, price, imageSrc 
   }
 
   return (
-  	<Card.Root
+    <Card.Root
       maxW="sm"
       variant="elevated"
       bgColor={bgColorCard}
@@ -69,7 +69,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ name, description, price, imageSrc 
           borderRadius="full"
           onClick={() => handleOrder(name)}
         >
-            Order
+          Order
         </Button>
       </Card.Footer>
 
