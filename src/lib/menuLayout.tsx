@@ -18,14 +18,14 @@ const MenuLayout = ({ children }: MenuLayoutProps) => (
     }}
   >
     <Flex
-        direction="column"
-        align="center"
-        justify="center"
-        w="100%"
-        h="100%"
+      direction="column"
+      align="center"
+      justify="center"
+      w="100%"
+      h="100%"
     >
-      <Flex direction="row" mt="2">
-        { children }
+      <Flex direction="column" mt="2">
+        {children}
       </Flex>
     </Flex>
   </Box>
