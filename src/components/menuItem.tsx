@@ -5,7 +5,6 @@ import { Avatar, Button, Card } from '@chakra-ui/react';
 import { toaster } from "@/components/ui/toaster";
 import { useColorModeValue } from '@/components/ui/color-mode';
 import { menuItemColors } from '@/lib/theme';
-import sendOrderMail from '@/lib/order-mail';
 
 export interface MenuItemProps {
   name: string;
@@ -22,28 +21,38 @@ const MenuItem: React.FC<MenuItemProps> = ({ name, description, price, imageSrc 
   const colorDescription = useColorModeValue(menuItemColors.colorDescriptionLight, menuItemColors.colorDescriptionDark);
   const colorButton = useColorModeValue(menuItemColors.colorButtonLight, menuItemColors.colorButtonDark)
 
-  const handleOrder = (name: string) => {
-    sendOrderMail(name)
-      .then(() => {
-        toaster.success({
-          title: `Order for ${name} placed`,
-          action: {
-            label: "Ok",
-            onClick: () => console.log("Order placed"),
-          },
-        })
-      })
-      .catch((error) => {
-        console.error(error);
-        toaster.error({
-          title: "Error",
-          description: `Order for ${name} could not be placed`,
-          action: {
-            label: "Ok",
-            onClick: () => console.log("Order not placed"),
-          },
-        })
+  const handleOrder = async (name: string) => {
+    try {
+      const response = await fetch('/api/sendOrder', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(name),
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to send order');
+      }
+
+      toaster.success({
+        title: `Order for ${name} placed`,
+        action: {
+          label: "Ok",
+          onClick: () => console.log("Order placed"),
+        },
+      });
+    } catch (error) {
+      console.error(error);
+      toaster.error({
+        title: "Error",
+        description: `Order for ${name} could not be placed`,
+        action: {
+          label: "Ok",
+          onClick: () => console.log("Order not placed"),
+        },
+      });
+    }
   }
 
   return (
