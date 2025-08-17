@@ -1,9 +1,9 @@
 import emailjs from '@emailjs/browser';
 
 function sendOrderMail(order: string): Promise<void> {
-  const serviceId = process.env.SERVICE_ID || "";
-  const templateId = process.env.TEMPLATE_ID || "";
-  const publicKey = process.env.PUBLIC_KEY || "";
+  const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID || "";
+  const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID || "";
+  const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY || "";
 
   const templateParams = {
     menu_name: order,
