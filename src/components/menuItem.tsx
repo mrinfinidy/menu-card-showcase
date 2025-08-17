@@ -48,7 +48,8 @@ const MenuItem: React.FC<MenuItemProps> = ({ name, description, price, imageSrc 
 
   return (
     <Card.Root
-      maxW="sm"
+      flex="1"
+      minW="300px"
       variant="elevated"
       bgColor={bgColorCard}
     >
