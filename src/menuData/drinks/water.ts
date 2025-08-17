@@ -1,4 +1,3 @@
-
 import { MenuItemProps } from "@/components/menuItem";
 
 const water: MenuItemProps = {
