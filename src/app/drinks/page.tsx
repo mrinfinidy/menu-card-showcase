@@ -6,7 +6,7 @@ import beer from "@/menuData/drinks/beer";
 import redWine from "@/menuData/drinks/redwine";
 import water from "@/menuData/drinks/water";
 
-const Food = () => {
+const Drinks = () => {
   return (
     <Container>
       <MenuLayout>
@@ -25,4 +25,4 @@ const Food = () => {
   )
 }
 
-export default Food;
+export default Drinks;
