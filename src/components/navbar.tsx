@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import NextLink from "next/link";
-import { 
+import {
   Box,
   Container,
   Flex,
@@ -56,14 +56,14 @@ const Navbar = () => {
           <NextLink href="/food" onClick={() => router.push('/food')}>
             Food
           </NextLink>
-          <NextLink href="/drinks" onClick={() => router.push('drinks')}>
+          <NextLink href="/drinks" onClick={() => router.push('/drinks')}>
             Drinks
           </NextLink>
         </Stack>
 
         <Box ml="auto">
           <ColorModeButton />
-          <Box ml={2} display={{ base: 'inline-block', md:'none' }}>
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <MenuRoot>
               <MenuTrigger>
                 <Icon as={RxHamburgerMenu} w={6} h={6} />
