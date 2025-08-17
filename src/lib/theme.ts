@@ -5,10 +5,13 @@ const config = defineConfig({
     semanticTokens: {
       colors: {
         orangeFg: {
-          value: { _light: "{colors.orange.200}", _dark: "{colors.orange.600}"},
+          value: { _light: "{colors.orange.200}", _dark: "{colors.orange.600}" },
+        },
+        grayFg: {
+          value: { _light: "{colors.gray.200}", _dark: "{colors.gray.600}" },
         },
         orangeBg: {
-          value: { _light: "{colors.orange.600}", _dark: "{colors.orange.200}"},
+          value: { _light: "{colors.orange.600}", _dark: "{colors.orange.200}" },
         },
       },
     },
